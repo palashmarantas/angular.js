@@ -1,8 +1,5 @@
 ---
 framework: jasmine
-blocklist:
-  - "./src/calculator.test.js##Blacklist a test"
-  - "./src/newFileTest.test.js##Comparision tests"
 licenseTier: xsmall
 postMerge:
   pattern:
