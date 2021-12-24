@@ -1,16 +1,24 @@
 ---
-framework: "jasmine"
+framework: jasmine
+blocklist:
+  - "./src/calculator.test.js##Blacklist a test"
+  - "./src/newFileTest.test.js##Comparision tests"
+licenseTier: xsmall
 postMerge:
   pattern:
     - "./i18n/spec/*.js"
     - "./i18n/ucd/*.js"
+  strategy: 
+    threshold: <5|100s|30m|6h>
+    type: <commit|time>
 preMerge:
   pattern:
     - "./i18n/spec/*.js"
     - "./i18n/ucd/*.js"
 preRun:
-  - yarn install
+     command:
+        - yarn install
 postRun:
-  - yarn --version
-  - yarn --version
+     command:
+        - yarn --version
 version: 2.0
