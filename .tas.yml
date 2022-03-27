@@ -1,13 +1,9 @@
 ---
 framework: jasmine
-licenseTier: xsmall
 postMerge:
   pattern:
     - "./i18n/spec/*.js"
     - "./i18n/ucd/spec/*.js"
-  strategy:
-    threshold: <5|100s|30m|6h>
-    type: <commit|time>
 preMerge:
   pattern:
     - "./i18n/spec/*.js"
